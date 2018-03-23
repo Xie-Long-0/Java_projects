@@ -1,178 +1,154 @@
-	.clr {
-		clear: both;
-		width: 0px;
-		height: 0px;
-		overflow: hidden;
-	}
+#nav li {
+	width: 90px;
+	margin-left: 1px;
+	float: left;
+}
 
-	#container{
-		margin: 0 auto;
-		width:1002px;
-	}
-	#header{
-		height: 128px;
-		background: gray url(./top_bg.jpg);
-	}
+#nav a {
+	display: block;
+	font: 16px/37px '微软雅黑', '黑体', sans-serif;
+	color: #363636;
+	width: 90px;
+	height: 37px;
+	text-align: center;
+}
 
-	#nav li {
-		width: 90px;
-		margin-right: 1px;
-		float:left;
-	}
+#nav a:hover {
+	border-radius: 2px;
+	color: #fff;
+	background: url(./nav_on.gif);
+}
 
-	#nav a {
-		/*font-size: 16px;
-		line-height: 37px;
-		font-family: '微软雅黑';*/
-		font:16px/37px '微软雅黑','黑体',sans-serif;
-		color:#363636;
-		display: block;
-		width:90px;
-		height: 37px;
-		text-align: center;
-	}
+#lside {
+	height: 480px;
+	width: 694px;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	float: left;
+	border-top: none;
+}
 
-	#nav a:hover {
-		color:white;
-		background: url(./nav_on.gif);
-	}
+.subtitle {
+	height: 37px;
+	background: gray url(./index_main_top_bg.gif);
+}
 
-	#banner {
-		margin: 6px 0;
-	}
+.subtitle img {
+	margin: 5px 0 0 10px;
+	float: left;
+}
 
-	#main{
-	}
+.subtitle h1 {
+	color: #151515;
+	float: left;
+	margin-left: 10px;
+	font: 16px/37px '微软雅黑', SimHei, sans-serif;
+}
 
-	#lside {
-		height: 480px;
-		width: 694px;
-		border: 1px solid #EEE;
-		border-radius:5px; 
-		float: left;
-		border-top:none;
-	}
+.subtitle a {
+	display: block;
+	color: #888;
+	font: 12px/37px SimSun, serif;
+	float: right;
+}
 
-	.subtitle {
-		height: 37px;
-		background: gray url(./index_main_top_bg.gif);
-	}
+.four {
+	width: 326px;
+	height: 200px;
+	background: #eee;
+	margin: 10px;
+	float: left;
+}
 
-	.subtitle img {
-		margin:5px 0 0 10px;
-		float: left;
-	}
+.four img {
+	float: left;
+	margin-left: 10px;
+	padding: 6px;
+	background: #fff;
+}
 
-	.subtitle h1 {
-		color: #151515;
-		float: left;
-		margin-left: 10px;
-		font:16px/37px 'Microsoft Yahei' , SimHei , sans-serif;
-	}
+.four ul {
+	float: left;
+	margin-left: 10px;
+}
 
-	.subtitle a {
-		display: block;
-		color: #888;
-		font: 12px/37px SimSun,serif;
-		float:right;
-	}
+.four li {
+	background: url(./service_intro_bg.gif) no-repeat;
+	padding-left: 10px;
+	height: 20px;
+}
 
-	.four {
-		width: 326px;
-		height: 200px;
-		background: #EEE;
-		margin: 10px;
-		float: left;
-	}
+.four a {
+	font-size: 12px;
+	color: #888;
+}
 
-	.four img {
-		float: left;
-		margin-left: 10px;
-		padding: 6px;
-		background: white;
-	}
+.four a:visited {
+	color: #808080;
+}
 
-	.four ul{
-		float: left;
-		margin-left: 10px;
-	}
+.four a:hover {
+	color: #ff832c;
+}
 
-	.four li {
-		background: url(./service_intro_bg.gif) no-repeat;
-		padding-left: 10px;
-		height: 20px;
-	}
-	
-	.four a {
-		font-size: 12px;
-		color:#888;
-	}
+.four h2 {
+	color: #A0A0A0;
+	margin: 6px 0 6px 10px;
+	font-size: 16px;
+	font-family: '微软雅黑', SimHei, sans-serif;
+}
 
-	.four a:visited {
-		color:#808080;
-	}
+#rside {
+	width: 294px;
+	float: right;
+}
 
-	.four a:hover{
-		color: #FF832C;
-	}
+#art {
+	background: #eee;
+	margin-top: 1px;
+	padding-top: 10px;
+}
 
-	.four h2 {
-		color: #A0A0A0;
-		margin: 6px 0 6px 10px;
-		font-size:16px;
-		font-family: 'Microsoft Yahei' , SimHei , sans-serif;
-	}
+#art a {
+	font-size: 12px;
+	line-height: 29px;
+	color: #888;
+	display: block;
+	height: 29px;
+	padding-left: 30px;
+	background: url(./article_head.gif) no-repeat;
+}
 
-	#rside {
-		width: 294px;
-		float:right;
-	}
+#art a:hover {
+	color: #FF832C;
+	background: url(./article_on_bg.gif);
+}
 
-	#art {
-		background: #EEE;
-		margin-top: 1px;
-		padding-top: 10px;
-	}
+#contact {
+	margin-top: 1px;
+	height: 249px;
+	background: #eee;
+}
 
-	#art a {
-		font-size: 12px;
-		line-height: 29px;
-		color: #888;
-		display: block;
-		height: 29px;
-		padding-left: 30px;
-		background: url(./article_head.gif) no-repeat;
-	}
+footer {
+	margin-top: 15px;
+	height: 120px;
+}
 
-	#art a:hover{
-		color: #FF832C;
-		background: url(./article_on_bg.gif);
-	}
+footer ul {
+	height: 40px;
+	background: #eee;
+}
 
-	#contact {
-		margin-top: 1px;
-		height: 249px;
-		background: #EEE;
-	}
+footer li {
+	font-size: 12px;
+	float: left;
+	margin-top: 15px;
+	margin-right: 10px;
+}
 
-	#footer {
-		margin-top: 15px;
-		height: 120px;
-	}
-
-	#footer ul {
-		height: 40px;
-		background: #EEE;
-	}
-	#footer li {
-		font-size: 12px;
-		float: left;
-		margin-top: 15px;
-		margin-right: 10px;
-	}
-
-	#footer address {
-		margin-top: 10px;
-		font-size: 12px;
-		font-family: '微软雅黑',sans-serif;
-	}
+footer address {
+	margin-top: 10px;
+	font-size: 12px;
+	font-family: '微软雅黑',sans-serif;
+}
