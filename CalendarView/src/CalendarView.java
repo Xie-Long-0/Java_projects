@@ -12,7 +12,7 @@ public class CalendarView
 		Character select;
 		int year, month;
 
-		CurrentTime now = new CurrentTime();
+		CurrentDate now = new CurrentDate();
 		year = now.currentYear();
 		month = now.currentMonth();
 		SolarMonth sm = new SolarMonth(year, month);
@@ -78,7 +78,7 @@ public class CalendarView
 				break;
 				
 			case 'c':
-				now = new CurrentTime();
+				now = new CurrentDate();
 				year = now.currentYear();
 				month = now.currentMonth();
 				sm = new SolarMonth(year, month);
@@ -91,7 +91,7 @@ public class CalendarView
 
 			if (select == 'q')
 			{
-				System.out.printf("\n   ---END---\n");
+				System.out.printf("\t---END---\n\n");
 				break;
 			}
 
@@ -235,7 +235,7 @@ class SolarMonth
 }
 
 //获取当前时间
-class CurrentTime
+class CurrentDate
 {
 	//调用系统Calendar类
 	Calendar today = Calendar.getInstance();
@@ -267,7 +267,7 @@ class PrintView
 
 	public void printMonthTitle()
 	{
-		System.out.println("\t" + sm.getMonthName() + "  "
+		System.out.println("\n\t" + sm.getMonthName() + "  "
 						+ sm.getYear());
 		System.out.println("------------------------------");
 		System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
@@ -312,8 +312,7 @@ class HzPrintView extends PrintView
 	@Override
 	public void printMonthTitle()
 	{
-		System.out.println("\t  " + sm.getYear() + "年"
-						+ sm.getMonth() + "月");
+		System.out.printf("\n\t%d年  %2d月\n", sm.getYear(), sm.getMonth());
 		System.out.println("------------------------------");
 		System.out.println(" 日  一  二  三  四  五  六");
 	}
