@@ -2,7 +2,7 @@
 
 # 设置你要生成的jar包的文件名
 # Set the file name of your jar package:
-JAR_PKG = a.jar
+JAR_PKG = Calendar.jar
 # 设置你的项目的入口点
 # Set your entry point of your java app:
 ENTRY_POINT = CalendarView
