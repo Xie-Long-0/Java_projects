@@ -180,7 +180,7 @@ class SolarMonth
 		return false;
 	}
 
-	//获取某天是星期几，返回0-6
+	//获取某月1号是星期几，返回0-6
 	public int getStartWeek()
 	{
 		//计算星期几的公式，Y是年，D是这个日期在这年的第几天
