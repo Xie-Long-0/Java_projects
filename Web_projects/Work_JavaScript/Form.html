@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="cn">
+    <head>
+  	<meta charset="UTF-8">
+  	<title>表单验证</title>
+</head>
+
+<body>
+	<form id="form1" name="form1" method="get" action="" onsubmit="return checkform()">
+    <table width="777" border="1" cellpadding="1" cellspacing="1">
+      <tr>
+        <td colspan="3" ><div align="center">账号注册（模拟验证）</div></td>
+      </tr>
+      <tr>
+        <td width="350" ><div align="center">用户名(6-11位字母数字组成)：</div></td>
+        <td width="250"><div align="center"><input type="text" name="username" onblur="checkusername()" placeholder="6-12位" /></div></td>
+  <td><div id="errusername" align="center"></div></td>
+ </tr>
+ <tr>
+  <td width="250"><div align="center">输入年龄(0~100数值)：</div></td>
+  <td width="250"><div align="center" >
+   <label>   <input type="text" name="age" onblur="checkage()"/>
+   </label>
+  </div></td>
+   <td><div align="center" id="errage"></div></td>
+ </tr>
+ <tr>
+  <td width="250"><div align="center">输入密码(6-9位数字或字母组成)：</div></td>
+  <td width="250"><div align="center" >
+   <label>   <input type="password" name="password" onblur="checkpassword()"/>
+   </label>
+  </div></td>
+   <td><div align="center" id="errepassword"></div></td>
+ </tr>
+ <tr>
+  <td width="250"><div align="center">再次输入密码(6-9位数字或字母组成)：</div></td>
+  <td width="250"><div align="center" >
+   <label>   <input type="password" name="password1" onblur="checkpassword1()"/>
+   </label>
+  </div></td>
+   <td><div align="center" id="errepassword1"></div></td>
+ </tr>
+<tr>
+   <td colspan="3" ><div align="center"><input type="submit" name="Submit" value="提交"/>
+   <input type="reset" name="reset" value="重置"/>
+</div></td>
+</table>
+ </form>
+</body>
+</html>
+<script>
+	function checkusername(){
+		var myform = document.getElementById("form1");
+		var user_len = myform.username.value.length;
+		var name =/^[A-Za-z0-9]{6,11}$/;
+		if(user_len < 1|| !name.test(myform.username.value))
+      {
+        errusername.innerHTML = "<font color='red'>用户名不符合要求</font>";
+        return false;
+      }
+      else{
+        errusername.innerHTML = "<font color='green'>用户名符合要求</font>";        return true;      
+      }    
+	}
+
+function checkpassword(){
+	 var myform = document.getElementById("form1");
+      var password=/^[A-Za-z0-9]{6,9}$/;
+      if(!password.test(myform.password.value)){
+        errepassword.innerHTML = "<font color='red'>密码不符合要求</font>";
+        return false;
+      }else{
+        errepassword.innerHTML = "<font color='green'>密码符合要求</font>";        return true;      
+      }    
+}
+function checkpassword1(){
+	 var myform = document.getElementById("form1");
+      var password1=myform.password1.value;
+      var password2=myform.password.value;
+      if(password1 != password2)
+      {
+        errepassword1.innerHTML = "<font color='red'>两次密码不同</font>";
+        return false;
+      }else{
+        errepassword1.innerHTML = "<font color='green'>两次密码相同</font>";        return true;      
+     }    
+}
+//function validate(){
+ //var pwd1=document.getElementById('errepassword').value;
+ //var pwd2=document.getElementById('errepassword1').value;
+ //if(pwd1==pwd2){
+  //  document.getElementById("tishi").innerHTML="<font color='green'>两次密码相同</font>";
+   // document.getElementById("submit").disabled=false;
+   // }
+  //else
+ // {
+  //   document.getElementById("tishi").innerHTML="<font color='red'>两次密码不相同</font>";
+   //  document.getElementById("submit").disabled=true;
+  //}
+//}
+
+ function checkage(){      
+      var myform = document.getElementById("form1");      
+      var age = parseInt(myform.age.value);    
+      if( age>0 && age<=100)  {
+        errage.innerHTML = "<font color='green'>年龄符合要求</font>";
+        return true;    
+      } else{ 
+        errage.innerHTML = "<font color='red'>年龄不符合要求</font>";
+        return false;
+      }
+    }
+
+function checkform(){
+      checkusername();checkage();checkpassword();validate(); 
+      if(checkusername()&&checkpassword()&&checkage()&&validate()) { 
+       return true;        
+     }
+     else{
+      return false;
+    } 
+}
+
+
+</script>
