@@ -3,18 +3,19 @@ package backtrace;
 public class Queen {
 	int n;
 	long sum;
-    boolean[] shu, pie, na;     //棋盘上竖、撇、捺的状态标记
-	long start, stop;
-	
+	boolean[] shu, pie, na;     //棋盘上竖、撇、捺的状态标记
+
+//	long start, stop;
+
 	public Queen(int _n)
 	{
 		n = _n;
-		Init();
+		cacu();
 	}
 	
-	public void Init()
+	public void cacu()
 	{
-        start = System.currentTimeMillis();
+//		start = System.currentTimeMillis();
 		sum = 0;
         shu = new boolean[n];
         pie = new boolean[2*n-1];
@@ -49,8 +50,8 @@ public class Queen {
 	
 	boolean constraint(int row, int col)
 	{
-        int i = row + col;              //当前位置的撇编号
-        int j = n - 1 + col - row;      //当前位置的捺编号
+        int i = row + col;				//当前位置的撇编号
+        int j = n - 1 + col - row;		//当前位置的捺编号
         if (shu[col] || pie[i] || na[j]) {
             return false;
         }
@@ -71,10 +72,9 @@ public class Queen {
         shu[col] = pie[i] = na[j] = false;
     }
 
-    public void showResult()
+	public long output()
 	{
-        stop = System.currentTimeMillis();
-        long time = stop - start;
-		System.out.println("time= "+time+"ms,\t"+"i= "+n+", Sum= "+sum);
+		return sum;
 	}
+
 }
