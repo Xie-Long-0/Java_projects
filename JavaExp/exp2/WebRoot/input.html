@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>参数传递</title>
+</head>
+<body>
+    <div style="display: flex; align-items: center; flex-direction: column">
+        <form method="get" action="paramtest" >
+            <fieldset style="padding: 20px">
+                <legend><h3>表单传递参数测试</h3></legend>
+                姓名：<input type="text" name="name" ><br>
+                年龄：<input type="text" name="age" style="margin-top: 10px"><br>
+                <input type="submit" value="提交" style="margin: 20px 20px 0 50px">
+                <input type="reset" value="重置" style="margin: 20px 50px 0 20px">
+            </fieldset>
+        </form>
+        <hr />
+        <form method="post" action="first" >
+            <fieldset style="padding: 20px">
+                <legend><h3>学生信息</h3></legend>
+                学号：<input type="text" name="sno" ><br>
+                姓名：<input type="text" name="name" style="margin-top: 10px"><br>
+                <input type="submit" value="提交" style="margin: 20px 20px 0 50px">
+                <input type="reset" value="重置" style="margin: 20px 50px 0 20px">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Context reloadable = "true">
+    <Resource
+        name="jdbc/bookDS"
+        type="javax.sql.DataSource"
+        maxActive="4"
+        maxIdle="2"
+        username="xielong"
+        maxWait="5000"
+        driverClassName="com.mysql.jdbc.Driver"
+        password="zxcasd"
+        url="jdbc:mysql://localhost:3306/bookstore" />
+</Context>
