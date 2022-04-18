@@ -1,8 +1,19 @@
-import student.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
-import java.io.*;
-import java.text.*;
-import java.util.*;
+import student.Student;
 
 public class Main {
 
@@ -102,7 +113,7 @@ public class Main {
 			ObjectInputStream ois = new ObjectInputStream(binFile);
 
 			while (ois.available() > 1) {
-				stu_list.add((Student)ois.);
+				stu_list.add((Student)ois.readObject());
 			}
 
 			ois.close();

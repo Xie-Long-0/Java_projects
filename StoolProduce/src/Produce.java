@@ -1,5 +1,5 @@
-import java.util.*;
-import component.*;
+import component.Cylinder;
+import component.Stool;
 
 public class Produce
 {
